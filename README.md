@@ -1,7 +1,7 @@
 # 🏛️ VCS Sovereign (SBH)
 
 > **High-Performance Sovereign AI Runtime & Intelligent Copilot Model Router**  
-> Features GitHub Copilot-style Dynamic Local Model Routing, Live Web Research, YouTube Transcript Extraction, Real-Time Streaming Speech (Microsoft AI Natural Voices), Persistent Agent Memory (MEMORIA), and Self-Evolution v2.0.
+> Features GitHub Copilot-style Dynamic Local Model Routing, Live Web Research, YouTube Transcript Extraction, Real-Time Streaming Speech (Google AI Studio & Microsoft AI Natural Voices), Persistent Agent Memory (MEMORIA), and Self-Evolution v2.0.
 
 ---
 
@@ -21,8 +21,8 @@
    - **Truthful Status Reporting:** Distinguishes between self-contained local queries (`ONLINE — RESEARCH NOT NEEDED`), active live searches, and graceful offline fallback (`OFFLINE — LOCAL MODE` / `SEARCH FAILED — LOCAL FALLBACK`).
 
 3. **🔊 Hands-Free Read-Aloud & Streaming Speech**
-   - Real-time sentence chunking (`/[.!?]\s*$/`) that begins speaking as sentences arrive without waiting for the full response.
-   - Prioritized voice hierarchy with Microsoft AI Natural Voices (`Microsoft Aria Online`, `Jenny`, `Guy`, `Christopher`, etc.).
+   - Real-time sentence chunking (`/[.!?]+["\')\]]*\s+/g`) that speaks each completed sentence as it streams.
+   - Dual AI Voice Suite featuring **Google AI Studio Personas** (`Puck`, `Charon`, `Kore`, `Fenrir`, `Aoede`) alongside **Google AI** and **Microsoft AI Natural Voices** (`Aria`, `Jenny`, `Guy`, `Christopher`), with automatic cross-session memory (`localStorage`).
    - Automatic filtering of code blocks, URLs, and markdown punctuation from audio narration.
 
 4. **🧠 ClawHub MEMORIA & Autonomous Evolution v2.0**
