@@ -1,0 +1,57 @@
+# Space Bunny Harness (SBH) Master Configuration
+# Optimized for 1,000,000 Token Ultra-Deep Context
+
+harness:
+  name: "Space Bunny Harness"
+  version: "1.0.0"
+  port: 3090
+  host: "127.0.0.1"
+  dataDir: "C:\\Users\\vence\\.sbh"
+  sessionsDir: "C:\\Users\\vence\\.sbh\\sessions"
+
+# Context Engine Safeguards
+context:
+  maxAllowedTokens: 1000000
+  compactionThreshold: 850000     # Only compact when exceeding 850k tokens (vs DSH's 64k limit)
+  enablePruning: false            # Prevent premature tool-result truncations
+  preserveSystemSchemas: true     # Safely holds extensive multi-tool registries
+
+providers:
+  spacebunny:
+    type: "openai"
+    baseURL: "https://spacebunnymodel.com/api/v1"
+    apiKeyEnv: "SPACE_BUNNY_API_KEY"
+    defaultModel: "space-bunny-alpha"
+    models:
+      - id: "space-bunny-alpha"
+        name: "Space Bunny Alpha (1M Context)"
+        contextWindow: 1000000
+        maxOutputTokens: 8192
+      - id: "deepseek/deepseek-v4.1-flash-1017"
+        name: "DeepSeek 4.1 Flash 1017 (1M Context)"
+        contextWindow: 1000000
+        maxOutputTokens: 8192
+
+  ollama-local:
+    type: "openai"
+    baseURL: "http://127.0.0.1:11434/v1"
+    apiKey: "ollama"
+    models:
+      - id: "qwen2.5-coder:7b"
+        name: "Qwen 2.5 Coder 7B (Local Specialist)"
+        contextWindow: 32768
+        maxOutputTokens: 4096
+      - id: "deepseek-r1:8b"
+        name: "DeepSeek R1 8B (Local Chain-of-Thought)"
+        contextWindow: 32768
+        maxOutputTokens: 8192
+
+defaultProvider: "spacebunny"
+defaultModel: "space-bunny-alpha"
+
+# Integration with Jev Decision Memory
+jevIntegration:
+  enabled: true
+  autoLogDecisions: true
+  decisionMemoryPath: "C:\\Users\\vence\\vcs_command_center\\decision_memory.jsonl"
+  statePath: "C:\\Users\\vence\\vcs_command_center\\production_state.json"

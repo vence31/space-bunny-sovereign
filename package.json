@@ -1,0 +1,30 @@
+{
+  "name": "space-bunny-harness",
+  "version": "1.0.0",
+  "description": "Space Bunny Harness (SBH): High-context (1,000,000 tokens) agentic orchestration runtime reverse-engineered from Cordis & DSH",
+  "main": "lib/index.js",
+  "type": "module",
+  "bin": {
+    "sbh": "bin/sbh.js"
+  },
+  "scripts": {
+    "start": "node bin/sbh.js web",
+    "test": "node test/test_router.js"
+  },
+  "keywords": [
+    "space-bunny",
+    "deepseek-harness",
+    "agent",
+    "long-context",
+    "1m-context"
+  ],
+  "author": "VCS Sovereign Command Center",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.0.0",
+    "express": "^4.21.0",
+    "ws": "^8.18.0",
+    "openai": "^4.86.0",
+    "js-yaml": "^4.1.0"
+  }
+}
