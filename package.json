@@ -1,7 +1,7 @@
 {
   "name": "space-bunny-harness",
   "version": "1.0.0",
-  "description": "Space Bunny Harness (SBH): High-context (1,000,000 tokens) agentic orchestration runtime reverse-engineered from Cordis & DSH",
+  "description": "VCS Sovereign Harness (SBH): High-context (1,000,000 tokens) agentic orchestration runtime reverse-engineered from Cordis & DSH",
   "main": "lib/index.js",
   "type": "module",
   "bin": {
