@@ -1,4 +1,4 @@
-# 🧬 Space Bunny Sovereign — Autonomous Evolution Ledger
+# 🧬 VCS Sovereign — Autonomous Evolution Ledger
 *Continuous Meta-Learning & Safe Self-Improvement System (ClawHub self-evolution v2.0)*
 
 ## Evolution Milestones & Lineage Tree

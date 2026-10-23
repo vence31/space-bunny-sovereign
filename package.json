@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node bin/sbh.js web",
-    "test": "node test/test_router.js"
+    "test": "node test_router.js"
   },
   "keywords": [
     "space-bunny",

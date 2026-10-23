@@ -1,4 +1,4 @@
-# VCS Sovereign (SBH)
+# 🏛️ VCS Sovereign (SBH)
 
 > **High-Performance Sovereign AI Runtime & Intelligent Copilot Model Router**  
 > Features GitHub Copilot-style Dynamic Local Model Routing, Live Web Research, YouTube Transcript Extraction, Real-Time Streaming Speech (Microsoft AI Natural Voices), Persistent Agent Memory (MEMORIA), and Self-Evolution v2.0.
